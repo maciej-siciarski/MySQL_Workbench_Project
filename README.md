@@ -3,12 +3,12 @@
 ### **Relational database containing various queries, views and relation keys 🗂🔑**<br>
 
 - Overview
-- Queries
+- [Sample Queries](#sample-queries)
 
 ## Relation Diagram
 ![EER Diagram 1](https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/213cff0a-2f16-4e2f-b2d4-ac1adde64299)
 
-## Sample Queries 🔢
+## Sample Queries 🔢 {#sample-queries}
 
 ### Joining 2 tables with RIGHT JOIN + COUNT(*) ✨
 
@@ -30,7 +30,7 @@ How many employees did not place orders?
 
 https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/da436193-0be9-4d95-91e2-27b5a98bbf91
 
-### Inner join and Group By ✨
+### Inner join, Count(*) and Group By ✨
 
 Example: Verification of order status
 
@@ -68,4 +68,3 @@ Example: Verification of companies regarding produced products and relationships
 
       SELECT id, CONCAT(RTRIM(last_name), ' ', RTRIM(first_name)) AS FullName 
       FROM employees;
-
