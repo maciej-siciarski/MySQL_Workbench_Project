@@ -8,7 +8,7 @@
 ## Relation Diagram
 ![EER Diagram 1](https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/213cff0a-2f16-4e2f-b2d4-ac1adde64299)
 
-## Sample Queries 🔢 {#sample-queries}
+## Sample Queries 🔢 <a name="sample-queries"></a>
 
 ### Joining 2 tables with RIGHT JOIN + COUNT(*) ✨
 
