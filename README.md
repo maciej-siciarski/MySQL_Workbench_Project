@@ -30,7 +30,7 @@ How many employees did not place orders?
 
 https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/da436193-0be9-4d95-91e2-27b5a98bbf91
 
-### Inner join, Order by and Group By ✨
+### Inner join and Group By ✨
 
 Example: Verification of order status
 
@@ -42,6 +42,19 @@ Example: Verification of order status
 
 ![image](https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/0e316f7a-8847-4bc3-906d-5320a44e5eb8)
 
+###  Outer JOIN multiple tables ✨
+
+Example: Verification of companies regarding produced products and relationships between orders for individual items.
+
+      SELECT company AS 'Company', product_name AS 'Product Name', COUNT(supplier_id) AS 'Total Orders'
+      FROM suppliers
+      RIGHT JOIN products
+      ON suppliers.id = products.supplier_ids
+      RIGHT JOIN purchase_orders
+      ON purchase_orders.supplier_id = suppliers.id
+      GROUP BY company, product_name
+
+![image](https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/51b5d960-bfb8-450a-9d22-ef9e5fc8b5e0)
 
       
 
