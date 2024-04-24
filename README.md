@@ -2,11 +2,13 @@
 
 ### **Relational database containing various queries, views and relation keys 🗂🔑**<br>
 
-- Overview
+- [Overview](#overview)
 - [Sample Queries](#sample-queries)
 
 ## Relation Diagram
 ![EER Diagram 1](https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/213cff0a-2f16-4e2f-b2d4-ac1adde64299)
+
+## Tables overview <a name="overview"></a>
 
 ## Sample Queries 🔢 <a name="sample-queries"></a>
 
@@ -52,7 +54,7 @@ Example: Verification of companies regarding produced products and relationships
       ON suppliers.id = products.supplier_ids
       RIGHT JOIN purchase_orders
       ON purchase_orders.supplier_id = suppliers.id
-      GROUP BY company, product_name
+      GROUP BY company, product_name;
 
 ![image](https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/51b5d960-bfb8-450a-9d22-ef9e5fc8b5e0)
 
