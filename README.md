@@ -18,11 +18,13 @@ Example: <br>
 The management requests a report showing whether all employees have placed orders. The report should include the order date, the employee's last name, and their job position.
 How many employees did not place orders?
 
+      CREATE VIEW EmployeesOrders AS
       SELECT last_name, job_title, order_date
       FROM orders
       RIGHT JOIN employees
       ON orders.employee_id = employees.id;
 
+      CREATE VIEW LackOfOrders AS
       SELECT COUNT(*) as "Number of employees who did not place orders"
       FROM orders
       RIGHT JOIN employees
@@ -36,6 +38,7 @@ https://github.com/maciej-siciarski/MySQL_Workbench_Project/assets/147531793/da4
 
 Example: Verification of order status
 
+      CREATE VIEW OrderVerification AS
       SELECT status_name AS 'Order Status', COUNT(*) AS 'Number of Orders'
       FROM orders
       JOIN orders_status
@@ -48,6 +51,7 @@ Example: Verification of order status
 
 Example: Verification of companies regarding produced products and relationships between orders for individual items.
 
+      CREATE VIEW CompanyProductOrders AS
       SELECT company AS 'Company', product_name AS 'Product Name', COUNT(supplier_id) AS 'Total Orders'
       FROM suppliers
       RIGHT JOIN products
